@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  text: string;
+}
+
+const { title, text } = Astro.props;
+---
+
+<div class="m-5 p-5 rounded-md bg-gradient-to-r from-red-900 to-red-700 c">
+  <div class="mb-3">
+    {title}
+  </div>
+  <div class="text-center text-3xl">
+    <p>
+      {text}
+    </p>
+  </div>
+</div>
+
+<style>
+  .c {
+    width: 30rem;
+    height: 18rem;
+    color: white;
+    background-color: var(--accent);
+  }
+</style>
