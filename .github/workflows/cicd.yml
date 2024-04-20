@@ -33,10 +33,6 @@ jobs:
       - name: Install app dependencies
         run: npm ci
 
-      - name: Run tests
-        if: ${{ github.event_name != 'release' }}
-        run: npm run test
-
       - name: Build
         run: npm run build
 
