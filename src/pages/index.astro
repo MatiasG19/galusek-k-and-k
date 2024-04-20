@@ -2,9 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
-import ContactCard from "../components/ContactCard.astro";
+import ContactCard from "../components/ContactCards.astro";
 import EmergecyCard from "../components/EmergecyCard.astro";
 import Carousel from "../components/Carousel.astro";
+import ContactCards from "../components/ContactCards.astro";
 ---
 
 <Layout title="Galusek Kälte- und Klimatechnik">
@@ -43,30 +44,14 @@ import Carousel from "../components/Carousel.astro";
     <Badge src="Kkf_logo.svg" />
   </div>
 
-  <div class="flex flex-wrap justify-center">
-    <div id="contact">
-      <ContactCard
-        title="Kontakt"
-        name="Galusek Kälte- und Klimatechnik"
-        street="Im Böttlin 5"
-        location="88699 Frickingen"
-        tel1="Tel. 07554 / 98 69 35"
-        fax="Fax 07554 / 98 69 36"
-        tel2="Mobil 0179 / 48 32 33 2"
-        email="Email galusek@.kaelte@gmail.com"
-      />
-    </div>
-    <div id="emergency">
-      <EmergecyCard title="Notruf" text="Mobil 0179 / 48 32 33 2" />
-    </div>
-  </div>
-</Layout>
+  <ContactCards />
 
-<style>
-  .shadow {
-    filter: drop-shadow(-3px 2px 6px #99979e);
-  }
-  .ci {
-    background-color: #2a186e;
-  }
-</style>
+  <style>
+    .shadow {
+      filter: drop-shadow(-3px 2px 6px #99979e);
+    }
+    .ci {
+      background-color: #2a186e;
+    }
+  </style>
+</Layout>
