@@ -5,12 +5,13 @@ import Badge from "../components/Badge.astro";
 import ContactCard from "../components/ContactCard.astro";
 import EmergecyCard from "../components/EmergecyCard.astro";
 import Footer from "../components/Footer.astro";
+import Carousel from "../components/Carousel.astro";
 ---
 
 <Layout title="Galusek Kälte- und Klimatechnik">
   <main>
     <div class="flex justify-between">
-      <img src="public/logo.png" class="h-20" />
+      <img src="logo.png" class="h-20" />
 
       <div class="flex justify-center">
         <div
@@ -28,7 +29,7 @@ import Footer from "../components/Footer.astro";
   </main>
 
   <div class="flex justify-center p-10">
-    <img class="rounded-md" src="public/image1.jpg" />
+    <Carousel />
   </div>
 
   <div
@@ -50,7 +51,7 @@ import Footer from "../components/Footer.astro";
   </div>
 
   <div class="flex justify-center">
-    <Badge src="public/Kkf_logo.svg" />
+    <Badge src="Kkf_logo.svg" />
   </div>
 
   <div class="flex flex-wrap justify-center">
