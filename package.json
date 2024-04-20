@@ -1,7 +1,9 @@
 {
   "name": "galusek-k-and-k",
+  "description": "Website for Galusek Kälte- und Klimatechnik",
   "type": "module",
   "version": "0.0.1",
+  "author": "MatiasG19",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
