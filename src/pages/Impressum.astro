@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import HeaderImpressum from "../components/HeaderImpressum.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -6,7 +7,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Impressum">
   <HeaderImpressum />
 
-  <main class="p-5 text-center text-blue-600">
+  <div class="p-5 text-center text-blue-600 h">
     <div>Impressum</div>
     <br />
     <p>
@@ -15,5 +16,13 @@ import Layout from "../layouts/Layout.astro";
       88699 Frickingen<br />
       Geschäftsführer: Damian Galusek
     </p>
-  </main>
+  </div>
+
+  <Footer />
 </Layout>
+
+<style>
+  .h {
+    min-height: calc(100vh - 100px);
+  }
+</style>
