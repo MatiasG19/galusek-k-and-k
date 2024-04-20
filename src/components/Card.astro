@@ -2,28 +2,30 @@
 interface Props {
   title: string;
   body: string;
+  src: string;
 }
 
-const { title, body } = Astro.props;
+const { title, body, src } = Astro.props;
 ---
 
 <div
-  class="m-5 p-5 rounded-md bg-gradient-to-r from-blue-900 to-blue-500 hover:scale-105 c"
+  class="m-5 p-5 rounded-md bg-white hover:scale-105 drop-shadow-xl text-blue-500 c"
 >
-  <div class="mb-3">
+  <div class="mb-3 text-2xl font-bold">
     {title}
   </div>
-  <div>
+  <div class="text-black">
     <p>
       {body}
     </p>
   </div>
+  <img src={src} class="p-3" />
 </div>
 
 <style>
   .c {
     width: 20rem;
-    height: 12rem;
-    color: white;
+
+    filter: drop-shadow(-3px 2px 6px #99979e);
   }
 </style>

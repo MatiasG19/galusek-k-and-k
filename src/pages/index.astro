@@ -6,46 +6,41 @@ import ContactCard from "../components/ContactCard.astro";
 import EmergecyCard from "../components/EmergecyCard.astro";
 import Footer from "../components/Footer.astro";
 import Carousel from "../components/Carousel.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout title="Galusek Kälte- und Klimatechnik">
-  <div class="flex justify-between">
-    <img src="logo.svg" class="h-20" />
-
-    <div class="flex justify-center">
-      <div
-        class="m-3 p-3 rounded-md bg-gradient-to-r from-blue-900 to-blue-500 cursor-pointer"
-      >
-        Kontakt
-      </div>
-      <div
-        class="m-3 p-3 rounded-md bg-gradient-to-r from-red-900 to-red-500 cursor-pointer"
-      >
-        Notruf
-      </div>
-    </div>
-  </div>
+  <Header />
 
   <div class="flex justify-center p-10">
     <Carousel />
   </div>
 
-  <div
-    class="flex justify-center rounded-md bg-gradient-to-r from-blue-900 to-blue-500 p-5 m-5 text-white text-2xl"
-  >
-    Ihr starker Partner, wenn es um Kälte- und Klimatechnik geht.
+  <div class="flex justify-center text-white text-2xl font-bold">
+    <p
+      class="w-full rounded-md bg-blue-500 shadow p-5 m-5 ci text-center"
+      style="max-width: 1200px;"
+    >
+      Ihr starker Partner, wenn es um Kälte- und Klimatechnik geht.
+    </p>
   </div>
 
   <div class="flex flex-wrap justify-center">
     <Card
       title="Klimaanlagen"
-      body="Wir verbauen Klimaanlagen aller Hersteller"
+      body="Von Klimaanlagen bis Kühlhäuser. Wir verbauen Geräte aller Hersteller."
+      src="klima.jpg"
     />
     <Card
       title="Wärmepumpen"
-      body="Wir verbauen Wärmepumpen aller hersteller"
+      body="Wärmepumpen von klein bis groß, wir beraten Sie gerne."
+      src="pump.jpg"
     />
-    <Card title="Wartung und Service" body="Service, Wartung und Notfälle" />
+    <Card
+      title="Wartung und Service"
+      body="Ob Service, Wartung oder Notfalleinsatz, wir sind für Sie da."
+      src="service.jpg"
+    />
   </div>
 
   <div class="flex justify-center">
@@ -68,3 +63,12 @@ import Carousel from "../components/Carousel.astro";
 
   <Footer />
 </Layout>
+
+<style>
+  .shadow {
+    filter: drop-shadow(-3px 2px 6px #99979e);
+  }
+  .ci {
+    background-color: #2a186e;
+  }
+</style>
