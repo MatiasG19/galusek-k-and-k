@@ -1,27 +1,17 @@
-name: CI/CD
+name: CD
 
 on:
   push:
     branches:
-      - "**"
-  release:
-    types: [released, prereleased]
+      - main
 
 jobs:
-  Build-Test-Release:
+  Release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: Set tag name
-        run: if ${{ github.event_name == 'release' }}; then
-          tag=${{ github.ref_name }};
-          elif ${{ github.event_name == 'workflow_dispatch' }}; then
-          tag=${{ inputs.tag }};
-          fi;
-          echo "TAG=$tag" >> $GITHUB_ENV;
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -33,18 +23,19 @@ jobs:
       - name: Install app dependencies
         run: npm ci
 
+      - name: Replace base url
+        run: sed -i 's/<base href="/" />/<base href="https://matiasg19.github.io/galusek-k-and-k/" />/g' src/layouts/Layout.astro
+
       - name: Build
         run: npm run build
 
       - name: Commit to page branch
-        if: ${{ github.head_ref == 'main' }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -a -m "Add changes"
 
       - name: Push changes
-        if: ${{ github.head_ref == 'main' }}
         uses: ad-m/github-push-action@master
         with:
           branch: page
