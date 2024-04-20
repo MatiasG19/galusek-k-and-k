@@ -9,24 +9,22 @@ import Carousel from "../components/Carousel.astro";
 ---
 
 <Layout title="Galusek Kälte- und Klimatechnik">
-  <main>
-    <div class="flex justify-between">
-      <img src="logo.png" class="h-20" />
+  <div class="flex justify-between">
+    <img src="logo.svg" class="h-20" />
 
-      <div class="flex justify-center">
-        <div
-          class="m-3 p-3 rounded-md bg-gradient-to-r from-blue-900 to-blue-500 cursor-pointer"
-        >
-          Kontakt
-        </div>
-        <div
-          class="m-3 p-3 rounded-md bg-gradient-to-r from-red-900 to-red-500 cursor-pointer"
-        >
-          Notruf
-        </div>
+    <div class="flex justify-center">
+      <div
+        class="m-3 p-3 rounded-md bg-gradient-to-r from-blue-900 to-blue-500 cursor-pointer"
+      >
+        Kontakt
+      </div>
+      <div
+        class="m-3 p-3 rounded-md bg-gradient-to-r from-red-900 to-red-500 cursor-pointer"
+      >
+        Notruf
       </div>
     </div>
-  </main>
+  </div>
 
   <div class="flex justify-center p-10">
     <Carousel />
@@ -57,7 +55,7 @@ import Carousel from "../components/Carousel.astro";
   <div class="flex flex-wrap justify-center">
     <ContactCard
       title="Kontakt"
-      name="Galusek Kälte und Klimatechnik"
+      name="Galusek Kälte- und Klimatechnik"
       street="Im Böttlin 5"
       location="88699 Frickingen"
       tel1="Tel. 07554 / 98 69 35"
@@ -70,14 +68,3 @@ import Carousel from "../components/Carousel.astro";
 
   <Footer />
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 80rem;
-  }
-</style>
