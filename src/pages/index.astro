@@ -4,14 +4,10 @@ import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import ContactCard from "../components/ContactCard.astro";
 import EmergecyCard from "../components/EmergecyCard.astro";
-import Footer from "../components/Footer.astro";
 import Carousel from "../components/Carousel.astro";
-import Header from "../components/Header.astro";
 ---
 
 <Layout title="Galusek Kälte- und Klimatechnik">
-  <Header />
-
   <div class="flex justify-center p-10">
     <Carousel />
   </div>
@@ -64,8 +60,6 @@ import Header from "../components/Header.astro";
       <EmergecyCard title="Notruf" text="Mobil 0179 / 48 32 33 2" />
     </div>
   </div>
-
-  <Footer />
 </Layout>
 
 <style>
