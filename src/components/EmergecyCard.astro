@@ -11,10 +11,8 @@ const { title, text } = Astro.props;
   <div class="mb-3 text-2xl font-bold">
     {title}
   </div>
-  <div class="text-center text-3xl">
-    <p>
-      {text}
-    </p>
+  <div class="text-center text-3xl center">
+    {text}
   </div>
 </div>
 
@@ -25,5 +23,8 @@ const { title, text } = Astro.props;
     color: white;
     background-color: var(--accent);
     filter: drop-shadow(-3px 2px 6px #99979e);
+  }
+  .center {
+    line-height: 9rem;
   }
 </style>
