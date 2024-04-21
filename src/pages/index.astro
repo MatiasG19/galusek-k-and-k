@@ -4,6 +4,10 @@ import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import Carousel from "../components/Carousel.astro";
 import ContactCards from "../components/ContactCards.astro";
+import klima from "../assets/klima.jpg";
+import pump from "../assets/pump.jpg";
+import service from "../assets/service.jpg";
+import Kkf_logo from "../assets/Kkf_logo.svg";
 ---
 
 <Layout title="Galusek Kälte- und Klimatechnik">
@@ -24,22 +28,22 @@ import ContactCards from "../components/ContactCards.astro";
     <Card
       title="Klimaanlagen"
       body="Von Klimaanlagen bis Kühlhäuser. Wir verbauen Geräte aller Hersteller."
-      src="klima.jpg"
+      src={klima.src}
     />
     <Card
       title="Wärmepumpen"
       body="Wärmepumpen von klein bis groß, wir beraten Sie gerne."
-      src="pump.jpg"
+      src={pump.src}
     />
     <Card
       title="Wartung und Service"
       body="Ob Service, Wartung oder Notfalleinsatz, wir sind für Sie da."
-      src="service.jpg"
+      src={service.src}
     />
   </div>
 
   <div class="flex justify-center">
-    <Badge src="Kkf_logo.svg" />
+    <Badge src={Kkf_logo.src} />
   </div>
 
   <ContactCards />
