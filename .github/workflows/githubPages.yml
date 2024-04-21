@@ -33,18 +33,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
-          
+
       - name: Install app dependencies
         run: npm ci
 
       - name: Replace base url
-        run: sed -i 's|base: \"/\"|base: \"/my-project/\"|g' astro.config.mjs
-        
+        run: |
+          sed -i 's|base: \"/\"|base: \"/galusek-k-and-k/\"|g' astro.config.mjs
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
-          
+          path: "./dist"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
