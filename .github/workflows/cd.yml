@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Replace base url
-        run: sed -i 's/<base href="/" />/<base href="https://matiasg19.github.io/galusek-k-and-k/" />/g' src/layouts/Layout.astro
+        run: sed -i 's|base: \"/\"|base: \"/my-project/\"|g' astro.config.mjs
 
       - name: Build
         run: npm run build
@@ -33,7 +33,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
+          git commit -a -m "Update page"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
