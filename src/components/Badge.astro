@@ -1,0 +1,19 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<div class="badge m-5 p-5">
+  <img src={src} alt={alt} />
+</div>
+
+<style>
+  .badge {
+    width: 250px;
+    height: 125px;
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import logo from "../assets/logo.svg";
+---
+
+<nav class="flex justify-between bg-white shadow">
+  <a href={import.meta.env.BASE_URL} class="h-20">
+    <img src={logo.src} alt="logo" class="h-20" />
+  </a>
+
+  <div class="flex justify-center">
+    <a
+      href={import.meta.env.BASE_URL + "#contact"}
+      class="m-3 p-3 rounded-md text-blue-600 cursor-pointer font-bold"
+    >
+      Kontakt
+    </a>
+    <a
+      href={import.meta.env.BASE_URL + "#emergency"}
+      class="m-3 p-3 rounded-md text-blue-600 cursor-pointer font-bold"
+    >
+      Notruf
+    </a>
+  </div>
+</nav>
+
+<style>
+  .shadow {
+    filter: drop-shadow(-3px 2px 6px #99979e);
+  }
+  .bg {
+    background-color: #7467a2;
+  }
+</style>

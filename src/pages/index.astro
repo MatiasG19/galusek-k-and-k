@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import Carousel from "../components/Carousel.astro";
+import ContactCards from "../components/ContactCards.astro";
+import klima from "../assets/klima.jpg";
+import pump from "../assets/pump.jpg";
+import service from "../assets/service.jpg";
+import Kkf_logo from "../assets/Kkf_logo.svg";
+---
+
+<Layout title="Galusek Kälte- und Klimatechnik">
+  <div class="flex justify-center p-10">
+    <Carousel />
+  </div>
+
+  <div class="flex justify-center text-white text-2xl font-bold">
+    <p
+      class="w-full rounded-md bg-blue-500 shadow p-5 m-5 ci text-center"
+      style="max-width: 1200px;"
+    >
+      Ihr starker Partner, wenn es um Kälte- und Klimatechnik geht.
+    </p>
+  </div>
+
+  <div class="flex flex-wrap justify-center">
+    <Card
+      title="Klimaanlagen"
+      body="Von Klimaanlagen bis Kühlhäuser. Wir verbauen Geräte aller Hersteller."
+      src={klima.src}
+      alt="Klimanalage"
+    />
+    <Card
+      title="Wärmepumpen"
+      body="Wärmepumpen von klein bis groß, wir beraten Sie gerne."
+      src={pump.src}
+      alt="Wärmepumpe"
+    />
+    <Card
+      title="Wartung und Service"
+      body="Ob Service, Wartung oder Notfalleinsatz, wir sind für Sie da."
+      src={service.src}
+      alt="Wartung und Serivce"
+    />
+  </div>
+
+  <div class="flex justify-center">
+    <Badge src={Kkf_logo.src} alt="Kälte- und Klimafachbetrieb" />
+  </div>
+
+  <ContactCards />
+
+  <style>
+    .shadow {
+      filter: drop-shadow(-3px 2px 6px #99979e);
+    }
+    .ci {
+      background-color: #2a186e;
+    }
+  </style>
+</Layout>
