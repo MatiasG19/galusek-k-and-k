@@ -41,6 +41,9 @@ jobs:
         run: |
           sed -i 's|base: \"/\"|base: \"/galusek-k-and-k/\"|g' astro.config.mjs
 
+      - name: Build
+        run: npm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
