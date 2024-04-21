@@ -5,6 +5,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.galusek.de',
-  base: '/galusek-k-and-k',
+  base: '/',
   integrations: [tailwind()]
 });
