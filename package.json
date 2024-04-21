@@ -8,7 +8,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build && npx tailwindcss -o dist/build.css --minify",
-    "preview": "astro preview",
+    "preview": "npm run build && astro preview",
     "astro": "astro"
   },
   "dependencies": {
