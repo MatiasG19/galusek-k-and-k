@@ -11,20 +11,26 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="de" class="scroll-smooth">
   <head>
+    <title>{title}</title>
     <base href={import.meta.env.BASE_URL} />
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content="Kälte- und Klimatechnik" />
+    <meta
+      name="keywords"
+      content="Kältetechnik, Klimatechnik, Wärmepumpe, Klimanalage, Kühlhaus"
+    />
     <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="MatiasG19" />
+    <link rel="canonical" href="https://galusek.de/" />
     <link rel="icon" type="image/svg+xml" href={favicon.src} />
     <script
       type="module"
       is:inline
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"
     ></script>
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
   </head>
   <body>
     <div>
