@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",
-    "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.1.8",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.1.9",
     "flowbite": "^4.0.1",
     "tailwindcss": "^4.2.0",
     "typescript": "^5.9.3"
